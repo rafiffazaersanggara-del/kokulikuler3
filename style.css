@@ -1,0 +1,190 @@
+/* --------------------------- */
+/* RESET CSS            */
+/* --------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    scroll-padding-top: 120px;
+    font-family: "Inter", Arial, sans-serif;
+}
+
+/* --------------------------- */
+/* BACKGROUND ANIMATION    */
+/* --------------------------- */
+
+#bg-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+
+    background: linear-gradient(120deg,
+        #1c397e,
+        #6b2cf5,
+        #ff0095,
+        #00d4a0,
+        #ffde59
+    );
+
+    background-size: 500% 500%;
+    animation: gradientMove 15s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50% }
+    25% { background-position: 50% 100% }
+    50% { background-position: 100% 50% }
+    75% { background-position: 50% 0% }
+    100% { background-position: 0% 50% }
+}
+
+
+/* --------------------------- */
+/* HEADER           */
+/* --------------------------- */
+header {
+    text-align: center;
+    padding: 3.5rem 1rem;
+    color: white;
+    backdrop-filter: blur(4px);
+}
+
+.title {
+    font-size: 2.7rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px #000;
+    margin-bottom: .7rem;
+}
+
+.subtitle {
+    max-width: 700px;
+    margin: auto;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* --------------------------- */
+/* NAVIGATION         */
+/* --------------------------- */
+nav {
+    margin-top: 1.8rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: .6rem;
+}
+
+nav a {
+    padding: .45rem .9rem;
+    border-radius: 25px;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    backdrop-filter: blur(6px);
+    transition: .25s;
+}
+
+nav a:hover {
+    background: rgba(255,255,255,0.45);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(255,255,255,0.5);
+}
+
+/* --------------------------- */
+/* MAIN            */
+/* --------------------------- */
+main {
+    max-width: 950px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+}
+
+/* CARD / SECTION STYLE */
+.card {
+    background: rgba(255,255,255,0.75);
+    padding: 1.5rem;
+    margin: 1.2rem 0;
+    border-radius: 15px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: .25s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+}
+
+/* Gambar dalam Section */
+.section-image {
+    width: 100%; /* Lebar penuh card */
+    max-height: 250px; /* Batasi tinggi untuk tampilan yang rapi */
+    object-fit: cover; /* Pastikan gambar mengisi area tanpa terdistorsi */
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+
+/* JUDUL SECTION */
+.card h2 {
+    font-size: 1.7rem;
+    margin-bottom: .5rem;
+    color: #1c1c1c;
+}
+
+/* DESKRIPSI SECTION */
+.desc {
+    font-size: 1.05rem;
+    color: #222;
+    margin-bottom: .6rem;
+}
+
+/* LIST */
+.card ul {
+    margin-left: 1.3rem;
+    color: #111;
+}
+
+.card ul li {
+    margin-bottom: .4rem;
+    line-height: 1.45rem;
+}
+
+/* --------------------------- */
+/* FOOTER            */
+/* --------------------------- */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    color: white;
+    text-shadow: 1px 1px 4px #000;
+    font-size: 1rem;
+}
+
+/* --------------------------- */
+/* FADE SCROLL ANIM     */
+/* --------------------------- */
+.fade {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInScroll 0.8s forwards ease-out;
+}
+
+@keyframes fadeInScroll {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
